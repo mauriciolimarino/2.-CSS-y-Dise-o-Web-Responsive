@@ -4,12 +4,55 @@ body{
   font-family: 'Dancing Script', cursive;
 }
 header{
+  animation: slidein 1s;
   background-color: #5b7989;
   border-radius: 10px 10px 0 0;
   color: white;
-  text-shadow: 2px #02010a;
+  height: 80px;
   width: 900px;
-  margin:0 auto;
+  margin: 0 auto;
+}
+aside{
+  float: left;
+  font-size: 32px;
+  padding: 15px 0 0 20px;
+  text-shadow: 2px 2px #02010a;
+}
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+
+		nav ul li {
+			display: inline-block;
+			line-height: 80px;
+      /*text-decoration: none;*/
+		}
+
+			nav ul li a {
+        color: white;
+				display: block;
+				padding: 0 10px;
+				/*text-decoration: none;*/
+			}
+
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+
+          nav ul li a:active {
+            text-decoration: none !important;
+          }
+body a{
+  font-weight: bold;
+  color: black;
+  display: block;
+  padding: 15px;
 }
 footer{
   background-color: #C6d5c5;
@@ -21,48 +64,26 @@ footer{
   margin:0 auto;
   width: 900px;
 }
-footer > div {
-	text-align: center;
+  footer > div {
+    font-size: 20px;
+  	text-align: left;
+    padding: 30px;
+  	width: 25%;
+  }
+    footer div b{
+      font-size: 26px;
+    }
 
-	width: 25%;
-}
-header h1{
-
-}
-aside{
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px 0 0 10px;
-}
-nav {
-  height: 100%;
-}
-ul{
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  height: 100%;
-}
-li{
-  float: right;
-  display: block;
-  margin: 0px 5px;
-  padding: 15px 0px;
-  height: 100%;
-}
 img{
   border: 2px solid white;
   box-shadow: 2px 2px 2px #02010a;
-}
-a{
-  color: white;
+  width: 80%;
 }
 .active{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 #contenido {
-  margin:0 auto;
+  margin: 0 auto;
   text-align: center;
   width: 900px;
 }
@@ -73,9 +94,7 @@ a{
 }
 #imagenCentral{
   display: block;
-  height: 400px;
   margin: 0 auto;
-  width: 80%;
 }
 #contenedorSecundario{
   background-color: #d5c75f;
@@ -94,17 +113,13 @@ a{
 }
 #paisaje{
   background-color: #82c3a6;
-  width: 90%;
   display: block;
   margin: 0 auto;
-  height: 300px;
 }
 #retrato{
   background-color: #82c3a6;
-  width: 90%;
   display: block;
   margin: 0 auto;
-  height: 300px;
 }
 #paisaje:hover {
   transform: rotate(10deg);
@@ -117,7 +132,7 @@ a{
   box-shadow: 2px 2px 2px #82c3a6;
 }
 
-/* paisaje.html*/
+/* paisajes.html y retratos.html*/
 .contenedor {
   background-color: #d5c75f;
   padding: 30px;
@@ -138,4 +153,111 @@ a{
 }
 #imagen3{
   filter: sepia(90%);
+}
+/* animacion */
+@keyframes slidein {
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/* Responsive design*/
+@media (max-width: 900px) {
+  img {
+    display: block;
+  	width: 80%;
+  }
+  header{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    height: 140px;
+    width: 100%;
+    padding: 0;
+  }
+  aside{
+    font-weight: bold;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+  }
+  nav {
+  	float: right;
+    width: 100%;
+    padding: 10px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+  }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 20px;
+    }
+
+      nav ul li a {
+        display: block;
+        padding: 0 10px;
+        /*text-decoration: none;*/
+      }
+
+        nav ul li a:hover {
+          background: #0b76a6;
+        }
+  #contenido{
+    display: block;
+    width: 100%;
+  }
+  #contenedorSecundario{
+    display: block;
+    width: 100%;
+  }
+  .c1{
+    display: block;
+    width: 100%;
+  }
+  .c2{
+    display: block;
+    width: 100%;
+  }
+  footer{
+    display: block;
+    width: 100%;
+  }
+  footer > div {
+    text-align: left;
+    margin: 0;
+    padding: 20px 0 20px 20px;
+  	width: 100%;
+  }
+
+  .contenedor {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .contenedor > div {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  	width: 80%;
+  }
+  .imagen{
+    border: 0;
+    box-shadow: 0px 0px 0px #02010a;
+    padding: 20px;
+    width: 90%;
+  }
 }
